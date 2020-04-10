@@ -1,17 +1,17 @@
 import React from 'react'
 import NextDocument from 'next/document'
-import { ServerStyleSheet as StyledComponentSheets } from 'styled-components'
+import { ServerStyleSheet } from 'styled-components'
 
 export default class Document extends NextDocument {
   static async getInitialProps (ctx) {
-    const styledComponentSheet = new StyledComponentSheets()
+    const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage
 
     try {
       ctx.renderPage = () =>
         originalRenderPage({
           enhanceApp: App => props =>
-            styledComponentSheet.collectStyles(
+            sheet.collectStyles(
               <App {...props}/>
             ),
         })
@@ -20,15 +20,15 @@ export default class Document extends NextDocument {
 
       return {
         ...initialProps,
-        styles: [
-          <React.Fragment key="styles">
+        styles: (
+          <>
             {initialProps.styles}
-            {styledComponentSheet.getStyleElement()}
-          </React.Fragment>,
-        ],
+            {sheet.getStyleElement()}
+          </>
+        ),
       }
     } finally {
-      styledComponentSheet.seal()
+      sheet.seal()
     }
   }
 }
