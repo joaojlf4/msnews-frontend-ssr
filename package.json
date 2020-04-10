@@ -1,0 +1,29 @@
+{
+  "name": "frontend-ssr",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "next": "9.3.4",
+    "next-images": "^1.4.0",
+    "next-routes": "^1.4.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-feather": "^2.0.3",
+    "react-helmet": "^5.2.1",
+    "react-markdown": "^4.3.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.0",
+    "react-share": "^4.1.0",
+    "styled-components": "^5.0.1",
+    "time-span-format": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.10.7"
+  }
+}
