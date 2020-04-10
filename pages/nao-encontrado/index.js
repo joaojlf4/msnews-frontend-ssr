@@ -1,7 +1,7 @@
 
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import { Container } from './styles';
+import { Container } from '../../styles/nao-encontrado';
 import Link from 'next/link';
 import { ArrowLeft } from 'react-feather';
 

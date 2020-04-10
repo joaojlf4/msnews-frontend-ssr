@@ -8,7 +8,7 @@ import {
   TitleInput,
   EyeInput,
   MarkdownInput
- } from './styles';
+ } from '../../styles/write';
 
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';

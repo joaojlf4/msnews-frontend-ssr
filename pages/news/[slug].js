@@ -6,7 +6,7 @@ import api from '../../services/api';
 
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import { Container, Content, MarkdownContainer, Eye, Title } from './styles';
+import { Container, Content, MarkdownContainer, Eye, Title } from '../../styles/news';
 import Markdown from 'react-markdown';
 
 export default function News() {
