@@ -13,13 +13,12 @@ export default function MainPage({ news }){
       <Head>
         <title>{title}</title>
         <meta property="og:url" content={process.env.APP_URL}/>
-        <meta property="og:type" content="article" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={"Fique sabendo do que acontece perto de você."} />
-        <meta property="og:image" content={props.query.pictureUrl || ''} />
+        <meta property="og:image" content="https://scontent.fppy2-1.fna.fbcdn.net/v/t1.0-9/92513165_110004553996149_1839171714169176064_o.jpg?_nc_cat=111&_nc_sid=e3f864&_nc_eui2=AeG9Bq10F2VnFeAodkeHQuLFyeRrN7URg7nJ5Gs3tRGDuQjYDxzrcfJqlloHmV_U0_oi2X8OW3_TsdfOSwVgtghW&_nc_ohc=Aitfars2H10AX8R6X8t&_nc_ht=scontent.fppy2-1.fna&oh=1fde2e5c3c8f12cb1e1a8957174cf093&oe=5EB8E2EC" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={"Fique sabendo do que acontece perto de você."} />
-        <meta name="twitter:image" content={props.query.pictureUrl || ''} />
+        <meta name="twitter:image" content="https://scontent.fppy2-1.fna.fbcdn.net/v/t1.0-9/92513165_110004553996149_1839171714169176064_o.jpg?_nc_cat=111&_nc_sid=e3f864&_nc_eui2=AeG9Bq10F2VnFeAodkeHQuLFyeRrN7URg7nJ5Gs3tRGDuQjYDxzrcfJqlloHmV_U0_oi2X8OW3_TsdfOSwVgtghW&_nc_ohc=Aitfars2H10AX8R6X8t&_nc_ht=scontent.fppy2-1.fna&oh=1fde2e5c3c8f12cb1e1a8957174cf093&oe=5EB8E2EC" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Header />
