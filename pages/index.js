@@ -5,12 +5,22 @@ import api from '../services/api';
 import Head from 'next/head';
 
 export default function MainPage({ news }){
+
+  const title = 'MS News - Notícias de Monte Sião e região.';
+
   return (
     <>
       <Head>
-        <title>MS News - O jornal do montessionense.</title>
-        <meta property="og:description" content="Notícias de montessião e região."/>
-        <meta />
+        <title>{title}</title>
+        <meta property="og:url" content={process.env.APP_URL}/>
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={"Fique sabendo do que acontece perto de você."} />
+        <meta property="og:image" content={props.query.pictureUrl || ''} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={"Fique sabendo do que acontece perto de você."} />
+        <meta name="twitter:image" content={props.query.pictureUrl || ''} />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Header />
       <div style={{
