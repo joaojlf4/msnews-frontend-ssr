@@ -9,14 +9,14 @@ import Footer from '../../components/Footer';
 import { Container, Content, MarkdownContainer, Eye, Title } from '../../styles/news';
 import Markdown from 'react-markdown';
 
-export default function News() {
+export default function News(props) {
 
   const [title, setTitle] = useState('');
   const [eye, setEye] = useState('');
   const [pictureUrl, setPictureUrl] = useState('');
   const [markdown, setMarkdown] = useState('');
   const [slug, setSlug] = useState('');
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   
   const router = useRouter();
 
@@ -55,12 +55,12 @@ export default function News() {
     <>
       <Head>
         <title>{title}</title>
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={eye} />
-        <meta property="og:image" content={pictureUrl} />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={eye} />
-        <meta name="twitter:image" content={pictureUrl} />
+        <meta property="og:title" content={props.title} />
+        <meta property="og:description" content={props.eye} />
+        <meta property="og:image" content={props.pictureUrl} />
+        <meta name="twitter:title" content={props.title} />
+        <meta name="twitter:description" content={props.eye} />
+        <meta name="twitter:image" content={props.pictureUrl} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Header />
@@ -80,4 +80,14 @@ export default function News() {
       <Footer />
     </>
   );
+}
+
+News.getInitialProps = async ctx => {
+  const slug = ctx.asPath.split('/')[2]
+  try {
+    const response = await api.get(`news?title=${slug}`);
+    return response.data;
+  } catch (err) {
+    return {}
+  }
 }

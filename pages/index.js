@@ -9,6 +9,8 @@ export default function MainPage({ news }){
     <>
       <Head>
         <title>MS News - O jornal do montessionense.</title>
+        <meta property="og:description" content="Notícias de montessião e região."/>
+        <meta />
       </Head>
       <Header />
       <div style={{
