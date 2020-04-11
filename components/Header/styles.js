@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
+  position: fixed;
+  top: 0;
   z-index: 4;
   display: flex;
   width: 100%;
@@ -11,6 +13,33 @@ export const Container = styled.header`
   box-shadow: 0px 1.5px 10px 0px rgba(0,0,0,0.25);
   /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25); */
   border: 1px solid #FFF;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding: 2em 5%;
+`;
+export const NdContainer = styled.header`
+  position: fixed;
+  z-index: 4;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 14vh;
+  border: 1px solid #FFF;
+  background: rgba(240, 240, 240, 0.6);
+  filter: blur(8px);
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding: 2em 5%;
+`;
+export const RdContainer = styled.header`
+  z-index: 3;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 13vh;
+  border: 1px solid #FFF;
+  background: #f0f0f0;
+  filter: blur(4px);
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: bold;
   padding: 2em 5%;

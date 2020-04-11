@@ -2,6 +2,7 @@ import React from 'react';
 import NextApp from 'next/app';
 import { createGlobalStyle } from 'styled-components';
 import Head from 'next/head';
+import NProgress from 'nextjs-progressbar';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -39,6 +40,12 @@ export default class App extends NextApp {
         <Head>
           <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
         </Head>
+        <NProgress
+          color="#51C7AC"
+          startPosition="0.6"
+          stopDelayMs="0"
+          height="5"
+        />
         <Component {...pageProps} />
         <GlobalStyle />
       </>

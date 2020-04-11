@@ -1,10 +1,12 @@
-import { Container, Navigation, Logo } from './styles';
+import { Container, Navigation, Logo, NdContainer, RdContainer } from './styles';
 import Link from 'next/link';
 // import Head from 'next/head';
 
 export default function Header({ page='' }) {
   return (
   <>
+    {/* <NdContainer /> */}
+    <RdContainer />
     <Container >
       <Navigation>
         <Link href="/">
