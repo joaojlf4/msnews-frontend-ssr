@@ -57,7 +57,6 @@ export default function News(props) {
 }
 
 News.getInitialProps = async ctx => {
-  console.log(ctx)
   if(ctx.query.title){
     return ctx;
   }else {

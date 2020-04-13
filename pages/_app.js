@@ -3,6 +3,7 @@ import NextApp from 'next/app';
 import { createGlobalStyle } from 'styled-components';
 import Head from 'next/head';
 import NProgress from 'nextjs-progressbar';
+import { initGA, logPageView } from '../utils/analytics'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -33,6 +34,15 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export default class App extends NextApp {
+
+  componentDidMount() {
+    if (!window.GA_INITIALIZED) {
+      initGA()
+      window.GA_INITIALIZED = true
+    }
+    logPageView();
+  }
+ 
   render(){
     const { Component, pageProps } = this.props;
     return (
