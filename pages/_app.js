@@ -3,7 +3,6 @@ import NextApp from 'next/app';
 import { createGlobalStyle } from 'styled-components';
 import Head from 'next/head';
 import NProgress from 'nextjs-progressbar';
-import { initGA, logPageView } from '../utils/analytics'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -34,20 +33,21 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export default class App extends NextApp {
-
-  componentDidMount() {
-    if (!window.GA_INITIALIZED) {
-      initGA()
-      window.GA_INITIALIZED = true
-    }
-    logPageView();
-  }
  
   render(){
     const { Component, pageProps } = this.props;
     return (
       <>
         <Head>
+        {'<!-- Global site tag (gtag.js) - Google Analytics -->'}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160028392-3"></script>
+        <script>{
+          `window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-160028392-3');`
+       }</script>
           <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
         </Head>
         <NProgress
