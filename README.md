@@ -1,4 +1,4 @@
-# MSNews (Server side rendering)
+# MSNews (Server Side Rendering)
 
 Journal website built with React + Next.js
 
