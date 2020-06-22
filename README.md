@@ -1,5 +1,5 @@
-# MSNews (Server Side Rendering)
+## MSNews Frontend (Server Side Rendering)
 
-Journal website built with React + Next.js
+![](demo.gif)
 
-Preview: https://montesiaonews.herokuapp.com/
+An website built with React, Next.js, Styled Components, Markdown for my local city newspapper.
