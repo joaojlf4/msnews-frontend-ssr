@@ -2,4 +2,4 @@
 
 ![](demo.gif)
 
-An website built with React, Next.js, Styled Components, Markdown for my local city newspapper.
+An website built with React, Next.js, Styled Components, Markdown for my local city newspaper.
